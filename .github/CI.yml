@@ -1,0 +1,30 @@
+name: Wertikalk - Yul Primer CI
+
+on:
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v3
+
+            - name: Install Foundry
+              uses: foundry-rs/foundry-toolchain@v1
+
+            - name: Install dependencies
+              run: forge install
+
+            - name: Build project
+              run: forge build
+
+            - name: Formatting check
+              run: forge fmt --check
+
+            - name: Run tests
+              run: forge test --ffi --no-match-test testFork
