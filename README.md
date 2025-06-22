@@ -11,7 +11,7 @@ It is a standard [Foundry](https://book.getfoundry.sh/) project.
 The main files are located at `./src/sol` and `./src/yul` - these correspond to the
 implementation of a same contract using [Solidity](https://soliditylang.org/) and [Yul](https://docs.soliditylang.org/en/latest/yul.html) respectively.
 
-The `./test` directory contains 3 fuzz tests that compare the results given by both contract implementations.
+The `./test` directory contains differential fuzzing tests that compare the results given by both contract implementations.
 
 ### Steps
 
@@ -26,3 +26,7 @@ Running tests:
 ```
 forge test -vvv
 ```
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
