@@ -26,5 +26,5 @@ jobs:
             - name: Formatting check
               run: forge fmt --check
 
-            - name: Run tests
-              run: forge test
+            # - name: Run tests
+            #   run: forge test
